@@ -42,7 +42,7 @@ while true ; do
         shift 2
     ;;
     -g )
-        HOSTS=$2
+        HOSTS="grep $2 /etc/hosts |awk '{print \$NF}'"
         shift 2
     ;;
     # OPTIONAL ARGS
